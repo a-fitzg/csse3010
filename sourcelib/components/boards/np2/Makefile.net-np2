@@ -1,0 +1,11 @@
+###################################################
+# LIBRARY SOURCES
+
+NP2_PATH=$(NP2_ROOT)/src/boards/netduinoplus2
+ENC_PATH=$(NP2_PATH)/enc28j60
+
+CFLAGS += -I$(ENC_PATH) -I$(NP2_PATH)/net
+CFLAGS += -DENABLE_ETHERNET
+
+LIBSRCS += $(wildcard SRCS += $(ENC_PATH)/*.c) $(wildcard $(NP2_PATH)/net/*.c)
+
